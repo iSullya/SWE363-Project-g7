@@ -5,12 +5,12 @@ body{
 }
 
 nav{
-    width: 782px;
+    width: 582px;
     height: 146px;
     border-radius: 130px 130px 130px 106px;
     background: black;
     position: fixed;
-    left: 20%;
+    left: 30%;
     bottom: 70%;
 
     
@@ -182,3 +182,31 @@ bottom: 50%;
 height: 19%;
     left: 50%;
 }
+
+#ProfileIcon:hover{
+cursor: pointer;
+color: blue;
+}
+.Postimg{
+    width: 350px;
+    height: 200px;
+    position: fixed;
+    left: 70%;
+    top: 20%;
+}
+.rec{
+position: fixed;
+width: 35%;
+height: 54%;
+border-radius: 30px;
+background: #FFF;
+margin: 2%;
+}
+.homePostImg{
+    position: fixed;
+    width: 35%;
+    height: 54%;
+    border-radius: 30px;
+    background: #FFF;
+    margin: 2%;
+    }

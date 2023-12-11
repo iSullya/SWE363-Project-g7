@@ -17,15 +17,19 @@
 <div>
     <nav>
         <!--Home icon-->
+        <a href="Home.html">
         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 86 96" fill="none" id="homeIcon">
             <path d="M74.7321 25.5L48.5995 8.00017C46.9839 6.91832 45.0192 6.3334 42.9997 6.3334C40.9803 6.3334 39.0144 6.91832 37.3988 8.00017L11.2662 25.5C9.52741 26.6643 8.11607 28.1741 7.14408 29.9098C6.1721 31.6455 5.66638 33.5595 5.66638 35.5001V81.3334C5.66638 83.5435 6.64928 85.663 8.39962 87.2258C10.15 88.7886 12.5244 89.6667 14.9997 89.6667H70.9997C73.4751 89.6667 75.8483 88.7886 77.5987 87.2258C79.349 85.663 80.3331 83.5435 80.3331 81.3334V35.5001C80.3331 33.5595 79.8262 31.6455 78.8542 29.9098C77.8822 28.1741 76.4709 26.6643 74.7321 25.5V25.5Z" stroke="#A9A4B0" stroke-width="11.0917" stroke-miterlimit="10"/>
           </svg>
+        </a>
     
           <!--Profil icon-->
+          <a href="profile.html">
           <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 96 92" fill="none" id="ProfileIcon">
             <path d="M66.6771 22.7279C66.6771 18.3157 64.6983 14.0843 61.1765 10.9644C57.6547 7.84454 52.8784 6.09183 47.8979 6.09183C42.9173 6.09183 38.141 7.84454 34.6192 10.9644C31.0974 14.0843 29.1187 18.3157 29.1187 22.7279V31.0459C29.1187 35.4581 31.0974 39.6895 34.6192 42.8094C38.141 45.9293 42.9173 47.682 47.8979 47.682C52.8784 47.682 57.6547 45.9293 61.1765 42.8094C64.6983 39.6895 66.6771 35.4581 66.6771 31.0459V22.7279Z" stroke="#A9A4B0" stroke-width="10.7919" stroke-miterlimit="10"/>
             <path d="M5.64517 89.2718C12.7813 72.1366 29.1192 60.1587 47.8984 60.1587C66.6776 60.1587 83.0155 72.1366 90.1516 89.2718" stroke="#A9A4B0" stroke-width="10.7919" stroke-miterlimit="10"/>
             </svg>
+        </a>
     </nav>
 </div>
 
@@ -54,6 +58,42 @@
     <img src="assets/PngItem_1571855 1.png" alt="Upload" id="UploadImg">
 
 </div>
+
+<script>
+
+    // Function to generate HTML for the blog post(Not completed, needs a server to run)
+    function generateBlogPost(title, content) {
+            // Create a new HTML document
+            const htmlDoc = document.implementation.createHTMLDocument('Dynamic Blog Post');
+
+            // Create elements for header, article, and footer
+            const header = htmlDoc.createElement('header');
+            const article = htmlDoc.createElement('article');
+            const footer = htmlDoc.createElement('footer');
+
+            // Set the title
+            const titleElement = htmlDoc.createElement('h1');
+            titleElement.textContent = title;
+            header.appendChild(titleElement);
+
+            // Set the content
+            const contentElement = htmlDoc.createElement('p');
+            contentElement.textContent = content;
+            article.appendChild(contentElement);
+
+            // Set the publication date (you can customize this)
+            const dateElement = htmlDoc.createElement('p');
+            dateElement.textContent = 'Published on: ' + new Date().toLocaleDateString();
+            footer.appendChild(dateElement);
+
+            // Append elements to the body
+            htmlDoc.body.appendChild(header);
+            htmlDoc.body.appendChild(article);
+            htmlDoc.body.appendChild(footer);
+
+            return htmlDoc.documentElement.outerHTML;
+        }
+</script>
 
 
 

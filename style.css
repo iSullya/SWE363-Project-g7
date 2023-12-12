@@ -210,3 +210,6 @@ margin: 2%;
     background: #FFF;
     margin: 2%;
     }
+#upvote:hover{
+    cursor: pointer;
+}

@@ -75,12 +75,36 @@ It is good practice to get into the habit of repeating questions before you answ
         
     <footer>
        <!--  <button class="upvote" style="left: 40.5%; top: 95%;  position: fixed; "> upvote</button>-->
-        <img src="assets/upvote.png" alt="upvoteIcon" style=" position: fixed; left: 40.5%; top: 95%; " class="upvote">
-                <p class="upVoteCounter" style="position: fixed; left: 41.9%; top: 95%; ">0</p>
+        <img src="assets/upvote.png" alt="upvoteIcon" style=" position: fixed; left: 40.5%; top: 95%; " id="upvote">
+                <p id="upVoteCounter01" style="position: fixed; left: 41.9%; top: 95%; ">0</p>
         <button class="comment" style="left: 50.5%; top: 95%;  position: fixed; "> comment</button>  
     </footer>
 
     </section>
+
+    <script>
+        //let ubVoteCounter = 0;
+        // Retrieve the counter value from localStorage on page load
+        let ubVoteCounter = parseInt(localStorage.getItem('upVoteCounter01')) || 0;
+        let upvoteIcon = document.getElementById("upvote")
+        let counterHtmlElement = document.getElementById("upVoteCounter01")
+
+        // Update the counter display
+        counterHtmlElement.textContent = ubVoteCounter;
+
+        upvoteIcon.addEventListener("click",function() {
+        upvoteIncrement("upVoteCounter01");})
+
+
+        function upvoteIncrement(id){
+            ubVoteCounter++;
+
+            counterHtmlElement.textContent = ubVoteCounter;
+
+            // Save the updated counter value to localStorage
+            localStorage.setItem(id, ubVoteCounter);
+        }
+    </script>
     <!-- <section>
         <h3 class="CommentUserName" ></h3>
         userName</h3>
@@ -90,3 +114,5 @@ It is good practice to get into the habit of repeating questions before you answ
 
 
 </body>
+
+</html>

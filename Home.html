@@ -41,11 +41,21 @@
                 Top Ten Tips for... Delivering a Great Training Session</h2>
     </a>
     <img src="assets/upvote.png" alt="upvoteIcon" style=" position: fixed; top: 90%; left: 39.7%;">
-                <p class="upVoteCounter" style="position: fixed; top: 90%; left: 41%;">0</p>
+                <p id="upVoteCounterH1" style="position: fixed; top: 90%; left: 41%;">0</p>
    
     <div>
         <img src="assets/Rectangle 2710.png" alt="post" class="rec" style="left: 50%; top: 37%;">
     </div>
+
+
+    <script>
+      // Retrieve the counter value from localStorage
+      let ubVoteCounter = parseInt(localStorage.getItem('upVoteCounter01')) || 0;
+      let ubVoteCounterH1 = document.getElementById("upVoteCounterH1");
+  
+      // Update the counter display
+      ubVoteCounterH1.textContent = ubVoteCounter;
+  </script>
     
 
   </body>

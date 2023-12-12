@@ -42,19 +42,30 @@
     </a>
     <img src="assets/upvote.png" alt="upvoteIcon" style=" position: fixed; top: 90%; left: 39.7%;">
                 <p id="upVoteCounterH1" style="position: fixed; top: 90%; left: 41%;">0</p>
-   
-    <div>
+
+      <a href="ChangeDiet.html">
+
         <img src="assets/Rectangle 2710.png" alt="post" class="rec" style="left: 50%; top: 37%;">
-    </div>
+        <img class="homePostImg"  src="assets/vigDish.jpg" alt="Dish_Image" style="left: 49.5%; bottom: 15%;  position: relative; height: 45%; width: 35.9%; ">
+        <h2 class="title" style="left: 53%; top: 69%;  position: fixed; width: 35%;">
+          HOW TO CHANGE YOUR DIET WHEN YOU START LIFTING WEIGHTS</h2>
+        </a>
+            <img src="assets/upvote.png" alt="upvoteIcon" style=" position: fixed; top: 90%; left: 79.7%;">
+            <p id="upVoteCounterH2" style="position: fixed; top: 90%; left: 81%;">0</p>
+        
 
 
     <script>
       // Retrieve the counter value from localStorage
       let ubVoteCounter = parseInt(localStorage.getItem('upVoteCounter01')) || 0;
       let ubVoteCounterH1 = document.getElementById("upVoteCounterH1");
+
+      let ubVoteCounter2 = parseInt(localStorage.getItem('upVoteCounter02')) || 0;
+      let ubVoteCounterH2 = document.getElementById("upVoteCounterH2");
   
       // Update the counter display
       ubVoteCounterH1.textContent = ubVoteCounter;
+      ubVoteCounterH2.textContent = ubVoteCounter2;
   </script>
     
 
